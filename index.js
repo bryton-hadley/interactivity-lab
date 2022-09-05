@@ -30,11 +30,17 @@ function addMovie(event) {
 
 function deleteMovie(event){
     event.target.parentNode.remove()
+    message.textContent = 'The movie has been removed'
     
 }
 
 
 function crossOffMovie(event) {
     event.target.classList.toggle('checked')
+    if(event.target.classList.contains('checked') === true) {
+     message.textContent = 'This Movie has been watched!'   
+    } else {
+        message.textContent = 'Movie added back!'
+    }
 
 }
